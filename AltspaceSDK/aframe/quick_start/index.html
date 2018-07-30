@@ -1,58 +1,74 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>altspace/components - Documentation</title>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width">
 
-    <script src="../scripts/prettify/prettify.js"></script>
-    <script src="../scripts/prettify/lang-css.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script>
-        function saveVerticalScrollPosition(evt){
-            window.localStorage.setItem('navscrollpos', evt.target.scrollTop);
-        }
-        function loadVerticalScrollPosition(){
-            var nav = document.querySelector('nav');
-            nav.scrollTop = window.localStorage.getItem('navscrollpos');
-        }
-    </script>
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="../styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="../styles/jsdoc-default.css">
-	<style>
-	img{
-	height:20%;
-	}
-	</style>
-</head>
-<body>
+        <title>AltspaceVR Development Tutorials</title>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+        <link href="/resources/css" rel="stylesheet">
+        <link href="/resources/font-awesome.min.css" rel="stylesheet">
 
-<label for="nav-trigger" class="overlay"></label>
+        <script src="/resources/jquery-3.2.1.min.js.download"></script>
 
-<nav onscroll='saveVerticalScrollPosition(event)' style="display:none;">
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-altspace_components.html">altspace/components</a></li><li><a href="module-altspace_resources.html">altspace/resources</a></li></ul><h3>Classes</h3><ul><li><a href="module-altspace_components.AFrameComponent.html">AFrameComponent</a></li><li><a href="module-altspace_components.AFrameSystem.html">AFrameSystem</a></li><li><a href="module-altspace_components.altspace.html">altspace</a></li><li><a href="module-altspace_components.altspace-cursor-collider.html">altspace-cursor-collider</a></li><li><a href="module-altspace_components.altspace-tracked-controls.html">altspace-tracked-controls</a></li><li><a href="module-altspace_components.collapse-model.html">collapse-model</a></li><li><a href="module-altspace_components.instantiator.html">instantiator</a></li><li><a href="module-altspace_components.n-billboard.html">n-billboard</a></li><li><a href="module-altspace_components.n-box-collider.html">n-box-collider</a></li><li><a href="module-altspace_components.n-capsule-collider.html">n-capsule-collider</a></li><li><a href="module-altspace_components.n-cockpit-parent.html">n-cockpit-parent</a></li><li><a href="module-altspace_components.n-collider.html">n-collider</a></li><li><a href="module-altspace_components.n-container.html">n-container</a></li><li><a href="module-altspace_components.n-gltf.html">n-gltf</a><ul class='methods'><li data-type='method'><a href="module-altspace_components.n-gltf.html#getBoundingBox">getBoundingBox</a></li></ul></li>
-	</nav>
-<script>loadVerticalScrollPosition()</script>
+        <script src="/resources/bootstrap.min.js.download"></script>
+        <link href="/resources/bootstrap.min.css" rel="stylesheet">
+        <link href="/resources/bootstrap-theme.min.css" rel="stylesheet">
 
-<div id="main">
-    
-    <h1 class="page-title">altspace developer quick start</h1>
-    
+        <script src="/resources/featherlight.min.js.download"></script>
+        <link href="/resources/featherlight.min.css" rel="stylesheet">
 
-    
+        <link href="/resources/animate.min.css" rel="stylesheet">
 
-<section>
-<article>
-<div style="background-color:lightgrey;">
+        <link rel="stylesheet" href="/resources/style.css">
+
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="https://developer.altvr.com/"><img class="logo" src="/resources/logo.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ol class="nav navbar-nav navbar-right">
+                        <li><a href="https://developer.altvr.com/">Home</a></li>
+                        <li><a href="https://developer.altvr.com/slack">Community</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="https://developer.altvr.com/local-dev/#">
+                                Resources
+                                <span class="caret"></span>
+                            </a>
+                            <ol class="dropdown-menu">
+                                <li><a href="https://developer.altvr.com/get-started">Get Started</a></li>
+                                <li><a href="https://altspacevr.github.io/AltspaceSDK/doc/">Documentation</a></li>
+                                <li><a href="https://github.com/AltspaceVR/AltspaceSDK">GitHub Repo</a></li>
+                                <li><a href="https://developer.altvr.com/devflag">Developer Registration</a></li>
+                                <li><a href="https://help.altvr.com/">Help Desk</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="https://developer.altvr.com/blog">Dev Blog</a></li>
+                        <li><a href="https://altvr.com/">AltVR.com</a></li>
+                    </ol>
+                </div>
+            </header>
+            
+
+            
+            <h1>
+              
+                
+                <a href="/">Development Tutorials</a> - Quick Start
+            </h1>
+          <div style="background-color:lightgrey;">
 <h2>Important!</h2>
 Use of a <em><strong>local webserver and basic HTML knowledge</strong></em> is required for this quick start. <br>A basic local webserver is outside the scope of this tutorial, but here is a good place to start:<br>
 <br>
@@ -60,13 +76,9 @@ Use of a <em><strong>local webserver and basic HTML knowledge</strong></em> is r
 <a href="https://lifehacker.com/start-a-simple-web-server-from-any-directory-on-your-ma-496425450">https://lifehacker.com/start-a-simple-web-server-from-any-directory-on-your-ma-496425450</a><br>
 <strong>Web Server for Windows 10:</strong><br>
 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48264">https://www.microsoft.com/en-us/download/details.aspx?id=48264</a><br>
-</div>
-<br>
-If you already know how to download,install and run a local web development server, continue.<br>
-<a href="https://developer.altvr.com/devflag">Developer Registration</a> is recommended.
-</article>
-</section>
-
+</div>  
+			
+			
 <section>
 <article>
 <h2>TL;DR</h2>
@@ -114,6 +126,12 @@ Login to the AltSpaceVR website <a href="https://account.altvr.com/">https://acc
     &lt;/a-scene>
   &lt;/body>
 &lt;/html></code></pre><br>
+
+<code>
+
+</code>
+
+
 Copy the "Sample Code" to a local HTML file named "index.html" and start your local web server in that directory.<br>
 <img src="images/09.JPG">
 </article>
@@ -137,7 +155,9 @@ An "empty and ready to go" development space should await you after login. It sh
 
 <section>
 <article>
-7. Open the "URL bar" in front of you and enter the address to your local webserver root (in this example, mine is http://localhost:8080)<br>
+<h2>7. Load Sample code into AltSpaceVR</h2>
+
+Open the "URL bar" in front of you and enter the address to your local webserver root (in this example, mine is http://localhost:8080)<br>
 <img src="images/07.JPG">
 </article>
 </section>
@@ -153,15 +173,39 @@ An "empty and ready to go" development space should await you after login. It sh
 
 
 
-</div>
+</div>			
+			
+			
+			
+			
 
-<br class="clear">
+        </div>
+        <footer>
+            <section>
+                <ol class="links">
+                    <li><a href="https://altvr.com/contact/">Contact Us</a></li>
+                    <li><a href="https://aka.ms/privacy">Privacy Policy</a></li>
+                    <li><a href="https://altvr.com/terms-of-service/">Terms of Service</a></li>
+                </ol>
+                <ol class="social">
+                    <li><a class="fa fa-twitter fa-lg" href="https://twitter.com/altspacevr"></a></li>
+                    <li><a class="fa fa-facebook fa-lg" href="https://facebook.com/altspacevr"></a></li>
+                    <li><a class="fa fa-reddit-alien fa-lg" href="https://www.reddit.com/r/AltspaceVR/"></a></li>
+                    <li><a class="fa fa-youtube fa-lg" href="https://www.youtube.com/channel/UC4mkmfU3NU72V7_3qZestpA"></a></li>
+                    <li><a class="fa fa-linkedin fa-lg" href="https://www.linkedin.com/company/3178875"></a></li>
+                </ol>
+            </section>
+            <hr>
+            <em class="fineprint">
+                © 2018 by AltspaceVR, Inc.
+                AltspaceVR® and altvr™ are trademarks of AltspaceVR, Inc.
+            </em><br>
+            <span class="fineprint">
+                All other trademarks are the property of their respective owners. All rights reserved.
+            </span>
+        </footer>
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the Minami theme.
-</footer>
+        
+    
 
-<script>prettyPrint();</script>
-<script src="../scripts/linenumber.js"></script>
-</body>
-</html>
+</body></html>
